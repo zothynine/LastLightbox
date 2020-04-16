@@ -1,0 +1,2 @@
+# LastLightbox
+A JavaScript Lightbox
