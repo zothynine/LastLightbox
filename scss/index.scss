@@ -1,6 +1,13 @@
 :root {
     --site--maxwidth: 80%;
-    --grid-gap: 1rem;
+    --grid-col-gap: 1rem;
+    --grid-row-gap: 6rem;
+    --grid-columns-size: 1fr;
+
+    @media screen and (min-width: 960px) {
+        --grid-columns-size: minmax(32%, 1fr);
+        --grid-row-gap: 1rem;
+    }
 }
 
 body {
@@ -10,12 +17,9 @@ body {
 }
 
 main {
-    padding-top: 3rem;
-}
-
-h1 {
-    max-width: var(--site--maxwidth);
     margin: 1rem auto;
+    max-width: var(--site--maxwidth);
+    padding-top: 3rem;
 }
 
 @import 'sections';
