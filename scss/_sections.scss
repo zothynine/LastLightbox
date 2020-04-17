@@ -1,0 +1,22 @@
+section {
+    margin: 6rem auto 1rem;
+    max-width: var(--site--maxwidth);
+
+    ul{
+        display: grid;
+        gap: var(--grid-gap);
+        grid-template-columns: repeat(auto-fit, minmax(32%, 1fr));
+        list-style-type: none;
+        padding: 0;
+        row-gap: 1rem;
+    }
+
+    figure {
+        margin: 0;
+    }
+
+    img {
+        height: auto;
+        width: 100%;
+    }
+}
