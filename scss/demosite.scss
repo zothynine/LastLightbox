@@ -17,10 +17,23 @@ body {
     margin: 0;
 }
 
-main {
+h1 {
+    svg {
+        width: 1em;
+        height: auto;
+    }
+}
+
+header {
     margin: 1rem auto;
     max-width: var(--site--maxwidth);
     padding-top: 3rem;
+    width: 80%;
+}
+
+main {
+    margin: 1rem auto;
+    max-width: var(--site--maxwidth);
     width: 80%;
 }
 
