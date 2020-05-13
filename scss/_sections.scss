@@ -1,0 +1,21 @@
+section {
+    margin: 6rem 0 1rem;
+
+    ul {
+        display: grid;
+        column-gap: var(--grid-col-gap);
+        grid-template-columns: repeat(auto-fit, var(--grid-columns-size));
+        list-style-type: none;
+        padding: 0;
+        row-gap: var(--grid-row-gap);
+    }
+
+    figure {
+        margin: 0;
+    }
+
+    img {
+        height: auto;
+        width: 100%;
+    }
+}
