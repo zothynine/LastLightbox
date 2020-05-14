@@ -4,8 +4,8 @@
   "description": "A JavaScript Lightbox. The last one you find, the last one you need.",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel index.html",
-    "build": "parcel build index.html"
+    "dev": "parcel index.html --out-dir demo-build",
+    "build": "parcel build index.html --no-content-hash --out-dir demo-build"
   },
   "repository": {
     "type": "git",
