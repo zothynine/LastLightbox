@@ -4,8 +4,8 @@
   "description": "A JavaScript Lightbox. The last one you find, the last one you need.",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel index.html --out-dir demo/debug",
-    "build": "parcel build index.html --no-content-hash --out-dir demo/prod"
+    "dev": "watch 'rollup --config rollup.config.dev.js & sass src/scss:debug' src",
+    "build": "rollup --config rollup.config.prod.js & sass src/scss:dist --style=compressed --no-source-map"
   },
   "repository": {
     "type": "git",
@@ -18,6 +18,11 @@
   },
   "homepage": "https://github.com/zothynine/LastLightbox#readme",
   "devDependencies": {
-    "sass": "^1.26.3"
+    "@rollup/plugin-json": "^4.0.3",
+    "rollup": "^2.10.2",
+    "rollup-plugin-sourcemaps": "^0.6.2",
+    "rollup-plugin-terser": "^5.3.0",
+    "sass": "^1.26.3",
+    "watch": "^1.0.2"
   }
 }
