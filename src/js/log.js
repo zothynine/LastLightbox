@@ -3,4 +3,4 @@ function log(msg) {
     console.log(msg)
 }
 
-export { log }
+export default log
