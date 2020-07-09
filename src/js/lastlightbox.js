@@ -7,6 +7,8 @@
  */
 class LastLightbox {
 
+    logPrefix = 'LastLightbox /'
+
     /**
      * Constructor
      * @param {Object} config
@@ -20,7 +22,7 @@ class LastLightbox {
      * Initialize lightbox
      */
     initialize() {
-        console.info('initializing Last Lightbox…')
+        console.info(`${this.logPrefix} Initializing…`)
     }
 }
 
