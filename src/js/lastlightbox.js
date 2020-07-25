@@ -7,14 +7,13 @@
  */
 class LastLightbox {
 
-    logPrefix = 'LastLightbox /'
-
     /**
      * Constructor
      * @param {Object} config
      */
     constructor(config) {
         this.config = config
+        this.logPrefix = 'LastLightbox /'
         this.initialize()
     }
 

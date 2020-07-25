@@ -1,13 +1,14 @@
-import sourcemaps from 'rollup-plugin-sourcemaps';
+import babel from 'rollup-plugin-babel';
 
-export default {
+const config = {
     input: 'src/js/lastlightbox.js',
-    plugins: [sourcemaps()],
     output: [
         {
-            sourcemap: true,
             file: 'debug/lastlightbox.js',
             format: 'iife'
         }
-    ]
+    ],
+    plugins: [babel()],
 };
+
+export default config;
