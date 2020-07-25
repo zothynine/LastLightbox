@@ -1,5 +1,5 @@
 /**
- * No this library does not support jquery, becaus I hate it!
+ * No this library does not support jquery, becaus I loathe it!
  */
 
 /**
