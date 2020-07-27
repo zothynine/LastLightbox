@@ -15,7 +15,7 @@ class LastLightbox {
      */
     constructor(config) {
         this.config = config
-        this.logPrefix = 'LastLightbox /'
+        this.logPrefix = 'LL /'
         this.initialize()
     }
 
