@@ -2,6 +2,8 @@
  * No this library does not support jquery, becaus I loathe it!
  */
 
+import * as media from './media.js'
+
 /**
  * A class to create lastlightbox instances
  */
@@ -18,14 +20,6 @@ class LastLightbox {
     }
 
     /**
-     * Find media elements in DOM
-     */
-    selectMedia() {
-        console.info(`${this.logPrefix} Searching for media…`)
-        return document.querySelectorAll('main img')
-    }
-
-    /**
      * Initialize lightbox
      */
     initialize() {
@@ -34,5 +28,7 @@ class LastLightbox {
         console.info(`${this.logPrefix} Found ${!!media && media.length || 0} media elements.`)
     }
 }
+
+LastLightbox.prototype.selectMedia = media.select
 
 window.LastLightbox = LastLightbox
