@@ -25,7 +25,6 @@ class LastLightbox {
     initialize() {
         console.info(`${this.logPrefix} Initializing…`)
         const media = this.selectMedia()
-        console.info(`${this.logPrefix} Found ${!!media && media.length || 0} media elements.`)
     }
 }
 
