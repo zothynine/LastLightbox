@@ -28,6 +28,8 @@ class LastLightbox {
     }
 }
 
+LastLightbox.prototype.onMediaItemClick = media.onMediaItemClick
+LastLightbox.prototype.addInteractionHandlers = media.addInteractionHandlers
 LastLightbox.prototype.selectMedia = media.select
 
 window.LastLightbox = LastLightbox

@@ -1,11 +1,9 @@
-let logPrefix = 'LL MEDIA /'
-
 /**
  * Handle clickevent on media item
  * @param {event} e
  */
 function onMediaItemClick(e) {
-    console.debug(`clicked ${e.target}`)
+    document.body.classList.add('ll--scroll-lock')
 }
 
 /**
@@ -14,8 +12,9 @@ function onMediaItemClick(e) {
  */
 function addInteractionHandlers(media) {
     if (!media) return;
-    console.info(`${logPrefix} Adding interaction handlers on ${media.length} elements`)
+    console.info(`${this.logPrefix} Adding interaction handlers on ${media.length} elements`)
     media.forEach(item => {
+        item.classList.add('ll--clickable')
         item.addEventListener('click', onMediaItemClick)
     })
 }
@@ -24,11 +23,11 @@ function addInteractionHandlers(media) {
  * Find media elements in DOM
  */
 function select() {
-    console.info(`${logPrefix} Searching for media elements…`)
+    console.info(`${this.logPrefix} Searching for media elements…`)
     const media = document.querySelectorAll('main img')
-    console.info(`${logPrefix} Set up ${!!media && media.length || 0} media elements.`)
-    addInteractionHandlers(media)
+    console.info(`${this.logPrefix} Set up ${!!media && media.length || 0} media elements.`)
+    this.addInteractionHandlers(media)
     return media
 }
 
-export { select }
+export { select, addInteractionHandlers, onMediaItemClick }
