@@ -15,7 +15,7 @@ class LastLightbox {
      */
     constructor(config) {
         this.config = config
-        this.logPrefix = 'LastLightbox /'
+        this.logPrefix = 'LL /'
         this.initialize()
     }
 
@@ -25,10 +25,11 @@ class LastLightbox {
     initialize() {
         console.info(`${this.logPrefix} Initializing…`)
         const media = this.selectMedia()
-        console.info(`${this.logPrefix} Found ${!!media && media.length || 0} media elements.`)
     }
 }
 
+LastLightbox.prototype.onMediaItemClick = media.onMediaItemClick
+LastLightbox.prototype.addInteractionHandlers = media.addInteractionHandlers
 LastLightbox.prototype.selectMedia = media.select
 
 window.LastLightbox = LastLightbox
