@@ -3,6 +3,7 @@
  */
 
 import * as media from './media.js'
+import * as overlay from './overlay.js'
 
 /**
  * A class to create lastlightbox instances
@@ -31,5 +32,7 @@ class LastLightbox {
 LastLightbox.prototype.onMediaItemClick = media.onMediaItemClick
 LastLightbox.prototype.addInteractionHandlers = media.addInteractionHandlers
 LastLightbox.prototype.selectMedia = media.select
+
+LastLightbox.prototype.showOverlay = overlay.show
 
 window.LastLightbox = LastLightbox

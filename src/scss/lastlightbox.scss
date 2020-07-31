@@ -1,3 +1,9 @@
+@use 'lastlightbox/overlay';
+
+[hidden] {
+    display: none;
+}
+
 .ll--scroll-lock {
     display: block;
     height: 100%;
