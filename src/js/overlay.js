@@ -16,6 +16,7 @@ function onOverlayClick(e) {
 
 /**
  * Inject overlay HTML
+ * @param {object} inst
  */
 function inject(inst) {
     console.info(`${inst.logPrefix} Injecting overlay HTML`)
