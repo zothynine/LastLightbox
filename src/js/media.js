@@ -1,9 +1,10 @@
 /**
  * Handle clickevent on media item
  * @param {event} e
+ * @param {object} inst
  */
-function onMediaItemClick(e) {
-    document.body.classList.add('ll--scroll-lock')
+function onMediaItemClick(e, inst) {
+    inst.showOverlay()
 }
 
 /**
@@ -15,7 +16,9 @@ function addInteractionHandlers(media) {
     console.info(`${this.logPrefix} Adding interaction handlers on ${media.length} elements`)
     media.forEach(item => {
         item.classList.add('ll--clickable')
-        item.addEventListener('click', onMediaItemClick)
+        item.addEventListener('click', e => {
+            onMediaItemClick(e, this)
+        })
     })
 }
 
