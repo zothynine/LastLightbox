@@ -1,5 +1,8 @@
-const overayTemplate = '<div class="ll--overlay"></div>'
 let overlay = null
+const overayTemplate = `
+<div class="ll--overlay">
+    <ul class="ll--slides"></ul>
+</div>`
 
 /**
  * Handle clicks on the overlay element
