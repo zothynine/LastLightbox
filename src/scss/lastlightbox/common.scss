@@ -1,5 +1,5 @@
-[hidden] {
-    display: none;
+[class^="ll--"][hidden] {
+    display: none !important;
 }
 
 .ll--scroll-lock {
