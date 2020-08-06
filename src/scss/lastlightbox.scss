@@ -1,15 +1,2 @@
+@use 'lastlightbox/common';
 @use 'lastlightbox/overlay';
-
-[hidden] {
-    display: none;
-}
-
-.ll--scroll-lock {
-    display: block;
-    height: 100%;
-    overflow: hidden;
-}
-
-.ll--clickable {
-    cursor: pointer;
-}
