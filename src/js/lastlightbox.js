@@ -1,5 +1,6 @@
 /**
- * No this library does not support jquery, becaus I loathe it!
+ * NO, this library does not support jquery, becaus I loathe it!
+ * NO, this library does not support IE for the same reason!
  */
 
 import * as media from './media.js'
