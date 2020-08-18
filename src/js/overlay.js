@@ -1,6 +1,9 @@
 const overlayTemplate = `
 <div class="ll--overlay" hidden="true">
     <ul class="ll--slides"></ul>
+    <button type="button" class="ll--overlay-close">
+        <span>close</span>
+    </button>
 </div>`
 
 /**
@@ -20,7 +23,9 @@ function inject() {
     console.info(`${this.logPrefix} Injecting overlay HTML`)
     document.body.insertAdjacentHTML('beforeend', overlayTemplate)
     this.overlay = document.body.querySelector('.ll--overlay')
-    this.overlay.addEventListener('click', e => {
+    const closeButton = this.overlay.querySelector('.ll--overlay-close')
+    console.log(closeButton)
+    closeButton.addEventListener('click', e => {
         onOverlayClick(e, this)
     })
     this.slidesList = this.overlay.querySelector('.ll--slides')
