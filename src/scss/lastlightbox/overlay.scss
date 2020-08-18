@@ -13,6 +13,7 @@
 .ll--overlay-close {
     background-color: #000;
     border-width: 0;
+    cursor: pointer;
     display: block;
     height: 1.6rem;
     position: absolute;
@@ -25,9 +26,14 @@
     }
 
     &::after {
-        content: '×';
         color: #fff;
+        content: '×';
         font-size: 1.6rem;
+        height: 100%;
         line-height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 100%;
     }
 }
