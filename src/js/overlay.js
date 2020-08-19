@@ -24,7 +24,6 @@ function inject() {
     document.body.insertAdjacentHTML('beforeend', overlayTemplate)
     this.overlay = document.body.querySelector('.ll--overlay')
     const closeButton = this.overlay.querySelector('.ll--overlay-close')
-    console.log(closeButton)
     closeButton.addEventListener('click', e => {
         onOverlayClick(e, this)
     })
