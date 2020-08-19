@@ -17,7 +17,6 @@ function create() {
         this.slides.push(this.slidesList.querySelector('.ll--slide:last-child'))
     })
     console.info(`${this.logPrefix} Created ${this.slides.length} slides`)
-    console.log(this.slides)
 }
 
 export { create }
