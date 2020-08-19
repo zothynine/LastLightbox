@@ -1,4 +1,31 @@
 /**
+ * Find text nodes for figures
+ * @param {Node} source
+ * @param {Node} slide
+ */
+function findAndInjectTextNodes(source, slide) {
+    // ${!!source.parentNode.querySelector('figcaption') && source.parentNode.querySelector('figcaption').outerHTML  || ''}
+    // ${!!source.parentNode.querySelector('footer') && source.parentNode.querySelector('footer').outerHTML || ''}
+
+    const nodes = source.parentNode.querySelectorAll('*') //source.parentNode.children
+    const allowedNodes = ['figcaption', 'footer', 'p']
+    let nodesString = ''
+
+    for (let i=0; i < nodes.length; i++) {
+        const name = nodes[i].nodeName.toLowerCase()
+        if (allowedNodes.indexOf(name) > -1) nodesString += nodes[i].outerHTML
+    }
+
+    if (nodesString !== '') {
+        slide.insertAdjacentHTML('beforeend', `
+            <div class="ll--description">
+                ${nodesString}
+            </div>
+        `)
+    }
+}
+
+/**
  * Create slides in sides container from media data
  * @param {NodeList} media
  */
@@ -15,7 +42,9 @@ function create() {
                 ${figureStr}
             </figure>
         </li>`)
-        this.slides.push(this.slidesList.querySelector('.ll--slide:last-child'))
+        const currentSlide = this.slidesList.querySelector('.ll--slide:last-child')
+        this.slides.push(currentSlide)
+        findAndInjectTextNodes(item, currentSlide)
     })
     console.info(`${this.logPrefix} Created ${this.slides.length} slides`)
 }
