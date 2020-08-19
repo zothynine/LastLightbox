@@ -12,6 +12,7 @@
 
 .ll--overlay-close {
     background-color: #000;
+    border-radius: 50%;
     border-width: 0;
     cursor: pointer;
     display: block;
@@ -30,7 +31,7 @@
         content: '×';
         font-size: 1.6rem;
         height: 100%;
-        line-height: 100%;
+        line-height: 85%;
         position: absolute;
         right: 0;
         top: 0;
