@@ -11,7 +11,9 @@ const overlayTemplate = `
  * @param {event} e
  */
 function onOverlayClick(e, inst) {
-    inst.overlay.setAttribute('hidden', true) // ! should only happen when clicking the close button in the futute
+    const CLASS_LIST = e.target.classList
+    if (!CLASS_LIST.contains('ll--overlay') && !CLASS_LIST.contains('ll--overlay-close')) return
+    inst.overlay.setAttribute('hidden', true)
     document.body.classList.remove('ll--scroll-lock')
 
 }
@@ -24,7 +26,7 @@ function inject() {
     document.body.insertAdjacentHTML('beforeend', overlayTemplate)
     this.overlay = document.body.querySelector('.ll--overlay')
     const closeButton = this.overlay.querySelector('.ll--overlay-close')
-    closeButton.addEventListener('click', e => {
+    this.overlay.addEventListener('click', e => {
         onOverlayClick(e, this)
     })
     this.slidesList = this.overlay.querySelector('.ll--slides')
