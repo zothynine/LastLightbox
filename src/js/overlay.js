@@ -9,6 +9,7 @@ const overlayTemplate = `
 /**
  * Handle clicks on the overlay element
  * @param {event} e
+ * @param {Object} inst
  */
 function onOverlayClick(e, inst) {
     const CLASS_LIST = e.target.classList
